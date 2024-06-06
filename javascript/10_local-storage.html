@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+  <body></body>
+  <script>
+    function saveAndRetrieveFromLocalStorage(key, value) {
+      if (typeof key !== "string" || typeof value !== "string") {
+        console.error(
+          "The function 'saveAndRetrieveFromLocalStorage' only takes strings as parameters."
+        )
+        return null
+      }
+
+      localStorage.setItem(key, value)
+
+      return localStorage.getItem(key)
+    }
+
+    console.log(saveAndRetrieveFromLocalStorage("framework", "symfony"))
+
+    // descomentar para ver el error
+    //console.log(saveAndRetrieveFromLocalStorage(42, 43))
+  </script>
+</html>

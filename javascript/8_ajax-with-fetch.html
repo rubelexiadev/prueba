@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX with Fetch</title>
+  </head>
+  <body>
+    <h2 id="result"></h2>
+  </body>
+  <script type="module">
+    let $result = document.getElementById("result")
+
+    let res = await fetch("https://v2.jokeapi.dev/joke/Programming?type=single")
+    let json = await res.json()
+
+    result.textContent = json.joke
+  </script>
+</html>
